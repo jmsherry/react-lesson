@@ -2,14 +2,15 @@
 
 import "./App.css";
 // import { getInvoices } from "./data";
-import ToggleDisplay from "./components/ToggleDisplay";
+
+import PeopleList from "./components/PeopleList";
 
 
 function App() {
   // let invoices = getInvoices();
   return (
     <div className="App">
-      <ToggleDisplay />
+      <PeopleList />
     </div>
   );
 }

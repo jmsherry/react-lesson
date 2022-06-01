@@ -8,10 +8,12 @@ import reportWebVitals from "./reportWebVitals";
 
 // Contexts
 import { MenuProvider } from "./contexts/menu.context";
+import { PersonProvider } from "./contexts/person.context";
 
 // Pages
-import About from "./pages/About.jsx";
-import Contact from "./pages/Contact.jsx";
+import AddPeople from './pages/AddPeople';
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Invoice from "./pages/Invoice";
 import NotFound from "./pages/NotFound";
 
@@ -23,15 +25,18 @@ root.render(
   <React.StrictMode>
     <Router>
       <MenuProvider>
-        <Header />
-        <OCMenu />
-        <Routes>
-          <Route index element={<App />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="/invoices/:number" element={<Invoice />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <PersonProvider>
+          <Header />
+          <OCMenu />
+          <Routes>
+            <Route index element={<App />} />
+            <Route path="people/add" element={<AddPeople />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="invoices/:number" element={<Invoice />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </PersonProvider>
       </MenuProvider>
     </Router>
   </React.StrictMode>
