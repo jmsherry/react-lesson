@@ -16,7 +16,7 @@ export default function PersonForm() {
     navigate('/');
   };
 
-  console.log(watch("example")); // watch input value by passing the name of it
+  console.log(watch("name")); // watch input value by passing the name of it
 
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
