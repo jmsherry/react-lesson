@@ -15,11 +15,16 @@ import Contact from "./pages/Contact.jsx";
 import Invoice from "./pages/Invoice";
 import NotFound from "./pages/NotFound";
 
+import Header from "./components/Header";
+import OCMenu from "./components/OffCanvasMenu";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
       <MenuProvider>
+        <Header />
+        <OCMenu />
         <Routes>
           <Route index element={<App />} />
           <Route path="about" element={<About />} />
