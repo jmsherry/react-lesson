@@ -1,16 +1,18 @@
-// import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import "./App.css";
-// import { getInvoices } from "./data";
-
-import PeopleList from "./components/PeopleList";
-
+import Header from "./components/Header";
+import OCMenu from "./components/OffCanvasMenu";
+import Layout from "./components/Layout";
 
 function App() {
-  // let invoices = getInvoices();
   return (
     <div className="App">
-      <PeopleList />
+      <Header />
+      <OCMenu />
+      <Layout>
+        <Outlet />
+      </Layout>
     </div>
   );
 }
